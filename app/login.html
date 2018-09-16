@@ -18,14 +18,24 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous">
       </script>
 
+      <nav class="navbar navbar-expand-md navbar-inverse mb-0" id="navbar" >
+        <div class="container-fluid justify-content-md-center " >
+          <h2 class="text-light p-1">CHIRP APP LOGIN</h2>
+        </div>
+      </nav>
+
       <!--Login template-->
-        <div id='main' class="container" ng-controller="authController">
+        <div id='main' class="container my-5" ng-controller="authController">
           <form class="form-auth" ng-submit="login()">
-            <h2>Log In</h2>
-            <p class="text-warning">{{error_message}}</p>
-            <input type="username" ng-model="user.username" placeholder="Username" class="form-control"><br>
-            <input type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>
-            <input type="submit" value="Log In" class="btn btn-primary"/>
+            <h2 class="p-0">Login Here</h2>
+            <p class="text-primary">{{error_message}}</p>
+            <div class="form-group input-group">
+              <span class="input-group-addon bg-info text-dark">@</span><input required type="username" ng-model="user.username" placeholder="Username" class="form-control"><br>
+            </div>
+            <div class="form-group">
+              <input required type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>
+            </div>
+              <input type="submit" value="Login" class="btn btn-success"/>            
           </form>
         </div>
 

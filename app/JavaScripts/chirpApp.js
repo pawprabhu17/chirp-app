@@ -2,7 +2,7 @@ var app = angular.module('chirpApp',[]);
 
 app.controller('mainController',function($scope){
 	$scope.posts= [];
-	$scope.newPost ={created_by:' ', text:' ', created_at:' '};
+	$scope.newPost ={created_by:'', text:'', created_at:''};
 
 	$scope.post =function(){
 		//date of new chirp created
@@ -12,13 +12,13 @@ app.controller('mainController',function($scope){
 		$scope.posts.push($scope.newPost);
 
 		//again ready to take new chirp
-		$scope.newPost ={created_by:' ', text:' ', created_at:' '};		
+		$scope.newPost ={created_by:'', text:'', created_at:''};		
 	};
 });
 
 app.controller('authController',function($scope){
-	$scope.user ={username:' ' , password: ' '};
-	$scope.error_message = ' ';
+	$scope.user ={username:'' , password: ''};
+	$scope.error_message = '';
 
 	/*postService.getAll().success(function(data){
 		$scope.posts=data;

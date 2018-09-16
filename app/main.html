@@ -18,13 +18,20 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous">
       </script>
 
-        <div id="main" ng-controller="mainController">
+
+      <nav class="navbar navbar-expand-md navbar-inverse mb-0" id="navbar" >
+        <div class="container-fluid " >
+          <h2 class="text-light p-1">CHIRP APP WELCOMES YOU!</h2>
+        </div>
+      </nav>
+
+        <div class ="container mt-5" id="main" ng-controller="mainController">
           <div class="row justify-content-md-center">
             <div class="col-md-8">
               <div class="clearfix">
                 <form ng-submit="post()" >
-                  <input required type="text" class="form-control" placeholder="Your name" ng-model="newPost.created_by"/> 
-                  <textarea required maxlength="200" class="form-control" rows="3" placeholder="Say something" ng-model="newPost.text">
+                  <input required type="text" class="form-control mb-1" placeholder="Your name" ng-model="newPost.created_by"/> 
+                  <textarea required maxlength="200" class="form-control mb-1" rows="3" placeholder="Say something" ng-model="newPost.text">
                   </textarea>
                   <input class="btn submit-btn pull-right my-1" type="submit" value="Chirp!"/>
                 </form>
